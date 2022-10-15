@@ -1,4 +1,4 @@
-export interface SkillTalent {
+export type SkillTalent = {
   name: string;
   unlock: string;
   description: string;
