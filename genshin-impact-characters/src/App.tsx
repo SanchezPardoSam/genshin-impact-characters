@@ -4,6 +4,7 @@ import { HeaderCharacter } from "./components/header";
 
 import "./App.css";
 import { BodyInfo } from "./components/bodyInfo";
+import { TableSkill } from "./components/tableSkill";
 import { TableInfo } from "./components/tableInfo";
 
 function App() {
@@ -45,13 +46,31 @@ function App() {
         affiliation={charactersInfo?.affiliation ?? ""}
         description={charactersInfo?.description ?? ""}
       ></BodyInfo>
-      <TableInfo
+
+      <TableSkill
         title="Skill Talents"
-        encabezado_1="Name"
-        encabezado_2="Unclock"
-        encabezado_3="Type"
+        encabezado_1="Type"
+        encabezado_2="Name"
+        encabezado_3="Unclock"
         encabezado_4="Description"
-        data={charactersInfo?.skillTalents ??  []}
+        data={charactersInfo?.skillTalents ?? []}
+      />
+
+      <TableInfo
+        title="Constellation"
+        encabezado_1="Level"
+        encabezado_2="Name"
+        encabezado_3="Unclock"
+        encabezado_4="Description"
+        data={charactersInfo?.constellations ?? []}
+      />
+      <TableInfo
+        title="Pasive Talents"
+        encabezado_1="Level"
+        encabezado_2="Name"
+        encabezado_3="Unclock"
+        encabezado_4="Description"
+        data={charactersInfo?.passiveTalents ?? []}
       />
     </div>
   );

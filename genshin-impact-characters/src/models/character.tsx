@@ -1,7 +1,6 @@
 import { SkillTalent } from "./skillTalent"
-import { PasiveTalent } from "./pasiveTalent"
+import { PassiveTalent } from "./pasiveTalent"
 import { Constellation } from "./constellation";
-import { useState } from "react";
 
 export interface Character {
     name: string;
@@ -15,7 +14,7 @@ export interface Character {
     birthday: string;
     description: string;
     skillTalents: SkillTalent[];
-    pasiveTalents: PasiveTalent[];
+    passiveTalents: PassiveTalent[];
     constellations: Constellation[];
     visionKey: string;
     weaponType: string;

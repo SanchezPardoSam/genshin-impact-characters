@@ -1,4 +1,4 @@
-export interface PasiveTalent{
+export type PassiveTalent ={
     name: string;
     unlock: string;
     description: string;

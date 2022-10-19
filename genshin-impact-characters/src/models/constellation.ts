@@ -1,4 +1,4 @@
-export interface Constellation {
+export type Constellation = {
     name: string;
     unlock: string;
     description: string;

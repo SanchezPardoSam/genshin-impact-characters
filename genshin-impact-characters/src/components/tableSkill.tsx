@@ -1,23 +1,22 @@
-import { Constellation } from "../models/constellation";
-import { PassiveTalent } from "../models/pasiveTalent";
+import { SkillTalent } from "../models/skillTalent";
 
-export type infoTable = {
+export type dataTable = {
   title: string;
   encabezado_1: string;
   encabezado_2: string;
   encabezado_3: string;
   encabezado_4: string;
-  data: PassiveTalent[] | Constellation[];
+  data: SkillTalent[];
 };
 
-export function TableInfo({
+export function TableSkill({
   title,
   encabezado_1,
   encabezado_2,
   encabezado_3,
   encabezado_4,
   data,
-}: infoTable) {
+}: dataTable) {
   return (
     <div>
       <h2>{data.length == 0 ? "" : title}</h2>
@@ -31,7 +30,7 @@ export function TableInfo({
         {data.map((fila) => {
           return (
             <tr>
-              <td>{fila.level}</td>
+              <td>{fila.type}</td>
               <td>{fila.name}</td>
               <td>{fila.unlock}</td>
               <td>{fila.description}</td>
